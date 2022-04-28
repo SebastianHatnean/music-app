@@ -1,0 +1,11 @@
+.wrapper {
+  background: linear-gradient(270deg,#071b52 0,teal);
+}
+
+.active {
+  color: white;
+}
+
+.navigation-bar {
+  background-color: #00000087;
+}

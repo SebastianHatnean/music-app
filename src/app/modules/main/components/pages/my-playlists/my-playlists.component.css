@@ -1,0 +1,45 @@
+header {
+  border-radius: 10px;
+  background-color: #ffffff63;
+  margin: 10px;
+}
+
+section h1 {
+  margin: 15px
+}
+
+.playlist {
+  width: 250px;
+  height: 375px;
+  background-color: #ffffff61;
+  border-radius: 15px;
+  margin: 10px;
+  cursor: pointer;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  transition: transform 0.25s ease-out;
+}
+
+.playlist img {
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.playlist:hover {
+  transform: scale(1.05);
+}
+
+.actions-wrapper {
+  display: flex;
+  margin: 10px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.play-button:hover i {
+  color: #fe9960;
+}
+
+.favorite-button i {
+  color: #ff5757;
+}

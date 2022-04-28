@@ -25,3 +25,9 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## To improve
+
+- Use a separate component for things that are used on multiple pages
+- Some popup / info message when playlist is added in favorite playlists list
+- Saving on local storage the favorites playlists

@@ -1,0 +1,39 @@
+<div class="wrapper">
+  <header>
+    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+      <h1 class="text-3xl font-bold text-white">My favorite playlists</h1>
+    </div>
+  </header>
+  <section>
+    <h1 class="text-3xl font-bold text-white" *ngIf="!playlists.length">No favorite playlists added</h1>
+    <div class="playlists">
+      
+      <div class="playlist shadow-2xl" *ngFor="let item of playlists">
+        <img class="playlist-image" [src]="item.artwork" />
+        <div class="curator-name text-1xl font-bold text-white text-center">
+          {{ item.curator_name }}
+        </div>
+        <div class="playlist-name text-1xl font-bold text-grey text-center">
+          {{ item.name }}
+        </div>
+        <div class="actions-wrapper">
+          <a [href]="item.url" target="_blank">
+            <button
+              class="play-button bg-cyan-500 shadow-lg shadow-cyan-500/50 text-white font-bold py-2 px-4 rounded-full"
+              tooltip="<p>Play it!</p>" placement="bottom" [showDelay]="500"
+            >
+              <i class="fas fa-play" style="font-size: 17px"></i>
+            </button>
+          </a>
+          <button
+            class="favorite-button bg-cyan-500 shadow-lg shadow-cyan-500/50 text-white font-bold py-2 px-4 rounded-full"
+            tooltip="<p>Remove from favorite!</p>" placement="bottom" [showDelay]="500"
+            (click)="removeFavoritePlaylist(item)"
+          >
+            <i class="fas fa-heart" style="font-size: 17px"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
